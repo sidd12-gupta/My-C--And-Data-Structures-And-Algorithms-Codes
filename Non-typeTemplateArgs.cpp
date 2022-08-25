@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+template <class T, int size>
+class A
+{
+public:
+    T arr[size];
+
+    void insert()
+    {
+        int i = 1;
+
+        for (int j = 0; j < size; j++)
+        {
+            arr[j] = i;
+            i++;
+        }
+    }
+
+    void display()
+    {
+        for (int i = 0; i < size; i++)
+        {
+            cout << arr[i] << " ";
+        }
+    }
+};
+
+int main()
+{
+    A<int, 15> b;
+    b.insert();
+    b.display();
+    return 0;
+}
